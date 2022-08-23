@@ -9,38 +9,47 @@ Undoubtedly, the IT sphere is developing every day and every minute. To keep up 
 TASK 2: selectors
 
 1. Scouts Panel_hyperlink_xpath
-//*[@id='__next']/form/div/div[1]/h5
-//*[contains(@class, "MuiTypography-root MuiTypography")]
-//*[text()='Scouts Panel']
+//*[contains(text(),'Scouts Panel')]
+//*[text()="Scouts Panel"]
 //child::div/h5
 
+
 2. Login_hyperlink_xpath
-//*[@id="login"]
-//*[contains(@class, "MuiInputBase-input MuiInput-input")]     - not unique
-//*[@id='__next']/form/div/div/div/div/input - not unique
-//child::div/input  - not unique
+//*[@id='login']
+//input[starts-with(@name,'login')]
+//input[@name='login']
+//*[@name='login']
+//*[contains(@name,'login')] 
 
 3.  Password_hyperlink_xpath
-//*[@id='password']//*[contains(@class, "MuiInputBase-input MuiInput-input")]  - not unique
-//*[@id='__next']/form/div/div/div/div/input  - not unique
-//child::div/input   - not unique
+//*[@id="password"]
+//input[@name='password'] 
+//*[starts-with(@name,'password')]
+//input[starts-with(@name,'password')]
+//input[starts-with(@id,'password')]
+//*[starts-with(@id,'password')]
+//*[contains(@name,'password')] 
+
 
 4. Remind_password_hyperlink_xpath
-//*[@id='__next']/form/div/div[1]/a
 //*[text()='Remind password']
 //child::div/a
+//a[contains(text(),'Remind')]
+//*[contains(text(),'Remind')]
+
 
 5. English_hyperlink_xpath
-//*[@id='__next']/form/div/div[2]/div
-//*[text()='English]
-//*[contains(@class, "MuiInputBase-input MuiInput-input")]  - not unique
+//*[text()='English']
+//*[contains(text(),'English')]
+//div[text()='English']
 
 6. Polski_hyperlink_xpath
-//*[@id='__next']/form/div/div[2]/div/div
-//*[text()='Polski']
-//child::div/input  - not unique
+//*[text()="Polski"]
+//div[text()='Polski']
+//*[contains(text(),'Polski')]
 
 7. Sign in_hyperlink_xpath
-//*[@id='__next']/form/div/div[2]/button/span[1]
 //*[text()='Sign in']
+//*[contains(text(),'Sign in')]
 //child::div/button/span
+
